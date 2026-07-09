@@ -1,0 +1,34 @@
+{
+  "name": "Bioniq Chat Pro",
+  "version": "1.1.2",
+  "techStack": {
+    "frameworks": ["React 18", "TailwindCSS 3", "Vite/esbuild"],
+    "stateManagement": ["Zustand 4"],
+    "styling": ["TailwindCSS 3", "CSS Variables"],
+    "routing": ["React Router DOM 6"],
+    "validation": ["Zod 3"],
+    "integration": ["Taskade Parade SDK", "Axios"]
+  },
+  "maturityLevel": "Prototype / Preview Template",
+  "lastAnalyzed": "2026-07-09T15:10:05+02:00",
+  "criticalIssues": [
+    {
+      "id": "CRIT-001",
+      "title": "Missing build/dev scripts",
+      "severity": "P0",
+      "description": "package.json scripts target scripts/build.mjs which is physically missing from the workspace."
+    },
+    {
+      "id": "CRIT-002",
+      "title": "Agent domain/purpose mismatch",
+      "severity": "P1",
+      "description": "Agent description refers to solar panel installation business, while customer database, product inventory, and UI represent an ISP named Bioniq."
+    },
+    {
+      "id": "CRIT-003",
+      "title": "Security: Hardcoded admin panel password",
+      "severity": "P2",
+      "description": "AdminPanel.tsx has hardcoded credentials (admin123)."
+    }
+  ]
+}
