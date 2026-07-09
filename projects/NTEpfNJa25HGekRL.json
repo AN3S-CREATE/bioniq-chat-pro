@@ -1,0 +1,524 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "550e8400-e29b-41d4-a716-446655440020",
+        "text": {
+          "ops": [
+            {
+              "insert": "Support Tickets"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440021",
+            "text": {
+              "ops": [
+                {
+                  "insert": "TICKET-2024-001: Internet speed slower than expected",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@su10": 2,
+              "@sup1": "Nick Lamprecht",
+              "@sup2": "+27 82 555 0123",
+              "@sup3": {
+                "type": "Select",
+                "optionId": "resolved"
+              },
+              "@sup4": {
+                "type": "Select",
+                "optionId": "medium"
+              },
+              "@sup5": {
+                "type": "Select",
+                "optionId": "technical"
+              },
+              "@sup6": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-01-10"
+                }
+              },
+              "@sup7": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-01-10"
+                }
+              },
+              "@sup8": "Alex Mthembu",
+              "@sup9": {
+                "type": "Select",
+                "optionId": "whatsapp"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440022",
+            "text": {
+              "ops": [
+                {
+                  "insert": "TICKET-2024-002: WiFi signal weak in bedroom",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@su10": 0,
+              "@sup1": "Chantelle Le Roux",
+              "@sup2": "+27 83 444 5678",
+              "@sup3": {
+                "type": "Select",
+                "optionId": "in-progress"
+              },
+              "@sup4": {
+                "type": "Select",
+                "optionId": "low"
+              },
+              "@sup5": {
+                "type": "Select",
+                "optionId": "technical"
+              },
+              "@sup6": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-01-08"
+                }
+              },
+              "@sup7": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-01-09"
+                }
+              },
+              "@sup8": "Chris van der Merwe",
+              "@sup9": {
+                "type": "Select",
+                "optionId": "whatsapp"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440023",
+            "text": {
+              "ops": [
+                {
+                  "insert": "TICKET-2024-003: Billing inquiry about monthly charges",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@su10": 0,
+              "@sup1": "Sarah Ndlovu",
+              "@sup2": "+27 71 333 9876",
+              "@sup3": {
+                "type": "Select",
+                "optionId": "open"
+              },
+              "@sup4": {
+                "type": "Select",
+                "optionId": "low"
+              },
+              "@sup5": {
+                "type": "Select",
+                "optionId": "billing"
+              },
+              "@sup6": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-01-12"
+                }
+              },
+              "@sup7": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-01-12"
+                }
+              },
+              "@sup8": "",
+              "@sup9": {
+                "type": "Select",
+                "optionId": "whatsapp"
+              }
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "views": {
+      "table": {
+        "id": "table",
+        "type": "table",
+        "rank": "V",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@sup1": {
+            "id": "/attributes/@sup1",
+            "fieldPath": "/attributes/@sup1",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@sup2": {
+            "id": "/attributes/@sup2",
+            "fieldPath": "/attributes/@sup2",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@sup3": {
+            "id": "/attributes/@sup3",
+            "fieldPath": "/attributes/@sup3",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@sup4": {
+            "id": "/attributes/@sup4",
+            "fieldPath": "/attributes/@sup4",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@sup5": {
+            "id": "/attributes/@sup5",
+            "fieldPath": "/attributes/@sup5",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@sup6": {
+            "id": "/attributes/@sup6",
+            "fieldPath": "/attributes/@sup6",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@sup7": {
+            "id": "/attributes/@sup7",
+            "fieldPath": "/attributes/@sup7",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@sup8": {
+            "id": "/attributes/@sup8",
+            "fieldPath": "/attributes/@sup8",
+            "rank": "zzV",
+            "hidden": false
+          },
+          "/attributes/@sup9": {
+            "id": "/attributes/@sup9",
+            "fieldPath": "/attributes/@sup9",
+            "rank": "zzk",
+            "hidden": false
+          },
+          "/attributes/@su10": {
+            "id": "/attributes/@su10",
+            "fieldPath": "/attributes/@su10",
+            "rank": "zzs",
+            "hidden": false
+          }
+        }
+      }
+    },
+    "fields": {
+      "@su10": {
+        "type": "number",
+        "displayName": "Resolution Time (hours)",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "decimal"
+        }
+      },
+      "@sup1": {
+        "type": "string",
+        "displayName": "Customer Name"
+      },
+      "@sup2": {
+        "type": "string",
+        "displayName": "Customer Phone"
+      },
+      "@sup3": {
+        "type": "Select",
+        "displayName": "Ticket Status",
+        "options": {
+          "open": {
+            "id": "open",
+            "name": "Open",
+            "color": "#F59E0B",
+            "rank": "0"
+          },
+          "in-progress": {
+            "id": "in-progress",
+            "name": "In Progress",
+            "color": "#3B82F6",
+            "rank": "1"
+          },
+          "waiting-customer": {
+            "id": "waiting-customer",
+            "name": "Waiting for Customer",
+            "color": "#8B5CF6",
+            "rank": "2"
+          },
+          "resolved": {
+            "id": "resolved",
+            "name": "Resolved",
+            "color": "#10B981",
+            "rank": "3"
+          },
+          "closed": {
+            "id": "closed",
+            "name": "Closed",
+            "color": "#6B7280",
+            "rank": "4"
+          }
+        }
+      },
+      "@sup4": {
+        "type": "Select",
+        "displayName": "Priority",
+        "options": {
+          "low": {
+            "id": "low",
+            "name": "Low",
+            "color": "#10B981",
+            "rank": "0"
+          },
+          "medium": {
+            "id": "medium",
+            "name": "Medium",
+            "color": "#F59E0B",
+            "rank": "1"
+          },
+          "high": {
+            "id": "high",
+            "name": "High",
+            "color": "#EF4444",
+            "rank": "2"
+          },
+          "urgent": {
+            "id": "urgent",
+            "name": "Urgent",
+            "color": "#DC2626",
+            "rank": "3"
+          }
+        }
+      },
+      "@sup5": {
+        "type": "Select",
+        "displayName": "Category",
+        "options": {
+          "technical": {
+            "id": "technical",
+            "name": "Technical Support",
+            "color": "#3B82F6",
+            "rank": "0"
+          },
+          "billing": {
+            "id": "billing",
+            "name": "Billing",
+            "color": "#10B981",
+            "rank": "1"
+          },
+          "installation": {
+            "id": "installation",
+            "name": "Installation",
+            "color": "#8B5CF6",
+            "rank": "2"
+          },
+          "general": {
+            "id": "general",
+            "name": "General Inquiry",
+            "color": "#6B7280",
+            "rank": "3"
+          },
+          "complaint": {
+            "id": "complaint",
+            "name": "Complaint",
+            "color": "#EF4444",
+            "rank": "4"
+          }
+        }
+      },
+      "@sup6": {
+        "type": "DateTime",
+        "title": "Created Date"
+      },
+      "@sup7": {
+        "type": "DateTime",
+        "title": "Last Updated"
+      },
+      "@sup8": {
+        "type": "string",
+        "displayName": "Assigned Agent"
+      },
+      "@sup9": {
+        "type": "Select",
+        "displayName": "Channel",
+        "options": {
+          "whatsapp": {
+            "id": "whatsapp",
+            "name": "WhatsApp",
+            "color": "#10B981",
+            "rank": "0"
+          },
+          "phone": {
+            "id": "phone",
+            "name": "Phone",
+            "color": "#3B82F6",
+            "rank": "1"
+          },
+          "email": {
+            "id": "email",
+            "name": "Email",
+            "color": "#8B5CF6",
+            "rank": "2"
+          },
+          "chat": {
+            "id": "chat",
+            "name": "Live Chat",
+            "color": "#F59E0B",
+            "rank": "3"
+          }
+        }
+      }
+    }
+  },
+  "preferences": {
+    "defaultView": "table"
+  }
+}

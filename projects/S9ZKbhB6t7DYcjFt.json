@@ -1,0 +1,439 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "550e8400-e29b-41d4-a716-446655440050",
+        "text": {
+          "ops": [
+            {
+              "insert": "Installation Appointments"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440051",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Nick Lamprecht - Fiber Installation",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@ins1": "Nick Lamprecht",
+              "@in10": 4,
+              "@ins2": "+27 82 555 0123",
+              "@ins3": "123 Main Street, Steve Tshwete, Mpumalanga",
+              "@ins4": {
+                "type": "Select",
+                "optionId": "fiber"
+              },
+              "@ins5": {
+                "type": "Select",
+                "optionId": "completed"
+              },
+              "@ins6": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2022-03-15"
+                }
+              },
+              "@ins7": "09:00 - 13:00",
+              "@ins8": "Alex Mthembu",
+              "@ins9": "Clear line of sight to tower confirmed"
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440052",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Sarah Ndlovu - Business Setup",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@ins1": "Sarah Ndlovu",
+              "@in10": 6,
+              "@ins2": "+27 71 333 9876",
+              "@ins3": "789 Business Park, Steve Tshwete, Mpumalanga",
+              "@ins4": {
+                "type": "Select",
+                "optionId": "business"
+              },
+              "@ins5": {
+                "type": "Select",
+                "optionId": "completed"
+              },
+              "@ins6": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2023-06-10"
+                }
+              },
+              "@ins7": "08:00 - 12:00",
+              "@ins8": "Sarah Ndlovu",
+              "@ins9": "Multiple access points required, static IP setup"
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440053",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Mike Johnson - WiFi Optimization",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@ins1": "Mike Johnson",
+              "@in10": 3,
+              "@ins2": "+27 84 777 1234",
+              "@ins3": "321 Residential Ave, Steve Tshwete, Mpumalanga",
+              "@ins4": {
+                "type": "Select",
+                "optionId": "wifi-setup"
+              },
+              "@ins5": {
+                "type": "Select",
+                "optionId": "scheduled"
+              },
+              "@ins6": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-12-15"
+                }
+              },
+              "@ins7": "14:00 - 17:00",
+              "@ins8": "Chris van der Merwe",
+              "@ins9": "Large house, mesh network setup required"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "views": {
+      "table": {
+        "id": "table",
+        "type": "table",
+        "rank": "V",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@ins1": {
+            "id": "/attributes/@ins1",
+            "fieldPath": "/attributes/@ins1",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@ins2": {
+            "id": "/attributes/@ins2",
+            "fieldPath": "/attributes/@ins2",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@ins3": {
+            "id": "/attributes/@ins3",
+            "fieldPath": "/attributes/@ins3",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@ins4": {
+            "id": "/attributes/@ins4",
+            "fieldPath": "/attributes/@ins4",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@ins5": {
+            "id": "/attributes/@ins5",
+            "fieldPath": "/attributes/@ins5",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@ins6": {
+            "id": "/attributes/@ins6",
+            "fieldPath": "/attributes/@ins6",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@ins7": {
+            "id": "/attributes/@ins7",
+            "fieldPath": "/attributes/@ins7",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@ins8": {
+            "id": "/attributes/@ins8",
+            "fieldPath": "/attributes/@ins8",
+            "rank": "zzV",
+            "hidden": false
+          },
+          "/attributes/@ins9": {
+            "id": "/attributes/@ins9",
+            "fieldPath": "/attributes/@ins9",
+            "rank": "zzk",
+            "hidden": false
+          },
+          "/attributes/@in10": {
+            "id": "/attributes/@in10",
+            "fieldPath": "/attributes/@in10",
+            "rank": "zzs",
+            "hidden": false
+          }
+        }
+      }
+    },
+    "fields": {
+      "@ins1": {
+        "type": "string",
+        "displayName": "Customer Name"
+      },
+      "@in10": {
+        "type": "number",
+        "displayName": "Estimated Duration (hours)",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "decimal"
+        }
+      },
+      "@ins2": {
+        "type": "string",
+        "displayName": "Customer Phone"
+      },
+      "@ins3": {
+        "type": "string",
+        "displayName": "Installation Address"
+      },
+      "@ins4": {
+        "type": "Select",
+        "displayName": "Installation Type",
+        "options": {
+          "fiber": {
+            "id": "fiber",
+            "name": "Fiber Installation",
+            "color": "#3B82F6",
+            "rank": "0"
+          },
+          "wifi-setup": {
+            "id": "wifi-setup",
+            "name": "WiFi Setup",
+            "color": "#10B981",
+            "rank": "1"
+          },
+          "upgrade": {
+            "id": "upgrade",
+            "name": "Equipment Upgrade",
+            "color": "#8B5CF6",
+            "rank": "2"
+          },
+          "repair": {
+            "id": "repair",
+            "name": "Repair Service",
+            "color": "#F59E0B",
+            "rank": "3"
+          },
+          "business": {
+            "id": "business",
+            "name": "Business Setup",
+            "color": "#EF4444",
+            "rank": "4"
+          }
+        }
+      },
+      "@ins5": {
+        "type": "Select",
+        "displayName": "Status",
+        "options": {
+          "scheduled": {
+            "id": "scheduled",
+            "name": "Scheduled",
+            "color": "#3B82F6",
+            "rank": "0"
+          },
+          "in-progress": {
+            "id": "in-progress",
+            "name": "In Progress",
+            "color": "#F59E0B",
+            "rank": "1"
+          },
+          "completed": {
+            "id": "completed",
+            "name": "Completed",
+            "color": "#10B981",
+            "rank": "2"
+          },
+          "cancelled": {
+            "id": "cancelled",
+            "name": "Cancelled",
+            "color": "#EF4444",
+            "rank": "3"
+          },
+          "rescheduled": {
+            "id": "rescheduled",
+            "name": "Rescheduled",
+            "color": "#8B5CF6",
+            "rank": "4"
+          }
+        }
+      },
+      "@ins6": {
+        "type": "DateTime",
+        "title": "Scheduled Date"
+      },
+      "@ins7": {
+        "type": "string",
+        "displayName": "Time Slot"
+      },
+      "@ins8": {
+        "type": "string",
+        "displayName": "Assigned Technician"
+      },
+      "@ins9": {
+        "type": "string",
+        "displayName": "Special Requirements"
+      }
+    }
+  },
+  "preferences": {
+    "defaultView": "table"
+  }
+}

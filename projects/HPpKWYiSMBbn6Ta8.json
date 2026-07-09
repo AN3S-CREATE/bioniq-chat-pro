@@ -1,0 +1,486 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "550e8400-e29b-41d4-a716-446655440030",
+        "text": {
+          "ops": [
+            {
+              "insert": "Product Inventory"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440031",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Fiber Installation Kit",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@pr10": "50m Fiber Cable, Wall Mount Kit, Power Supply, Installation Guide",
+              "@pro1": "Fiber Installation Kit",
+              "@pro2": "Installation",
+              "@pro3": 2500,
+              "@pro4": {
+                "type": "Select",
+                "optionId": "in-stock"
+              },
+              "@pro5": "PROD-001",
+              "@pro6": "Complete fiber optic installation package including all necessary cables, connectors, and mounting hardware.",
+              "@pro7": 25,
+              "@pro8": "Bioniq Supply Chain",
+              "@pro9": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-11-15"
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440032",
+            "text": {
+              "ops": [
+                {
+                  "insert": "WiFi 6 Router Upgrade",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@pr10": "WiFi 6 Technology, Gigabit Ethernet, MU-MIMO, 2-Year Warranty",
+              "@pro1": "WiFi 6 Router Upgrade",
+              "@pro2": "Hardware",
+              "@pro3": 1200,
+              "@pro4": {
+                "type": "Select",
+                "optionId": "in-stock"
+              },
+              "@pro5": "PROD-002",
+              "@pro6": "High-performance WiFi 6 router optimized for Bioniq's unrestricted internet service.",
+              "@pro7": 15,
+              "@pro8": "TechNet Solutions",
+              "@pro9": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-12-01"
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440033",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Mesh Network Extender",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@pr10": "Seamless Roaming, Easy Setup, App Control, Covers 150m²",
+              "@pro1": "Mesh Network Extender",
+              "@pro2": "Hardware",
+              "@pro3": 800,
+              "@pro4": {
+                "type": "Select",
+                "optionId": "in-stock"
+              },
+              "@pro5": "PROD-003",
+              "@pro6": "Extend your WiFi coverage throughout your home with seamless roaming.",
+              "@pro7": 30,
+              "@pro8": "TechNet Solutions",
+              "@pro9": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-11-20"
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440034",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Business Internet Package",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@pr10": "Dedicated Line, SLA Guarantee, Priority Support, Static IP",
+              "@pro1": "Business Internet Package",
+              "@pro2": "Service",
+              "@pro3": 1500,
+              "@pro4": {
+                "type": "Select",
+                "optionId": "in-stock"
+              },
+              "@pro5": "PROD-004",
+              "@pro6": "Dedicated business-grade internet with SLA guarantee and priority support.",
+              "@pro7": 999,
+              "@pro8": "Bioniq Services",
+              "@pro9": {
+                "type": "DateTime",
+                "dateTime": {
+                  "date": "2024-12-01"
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "id": "550e8400-e29b-41d4-a716-446655440035",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Smart Home Bundle",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "checkbox",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "attributes": {
+              "@pr10": "Smart Hub, IoT Optimization, Security Setup, Device Management",
+              "@pro1": "Smart Home Bundle",
+              "@pro2": "Bundle",
+              "@pro3": 3500,
+              "@pro4": {
+                "type": "Select",
+                "optionId": "out-of-stock"
+              },
+              "@pro5": "PROD-005",
+              "@pro6": "Complete smart home setup with optimized network configuration for IoT devices.",
+              "@pro7": 0,
+              "@pro8": "Smart Solutions Ltd"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "views": {
+      "table": {
+        "id": "table",
+        "type": "table",
+        "rank": "V",
+        "columns": {
+          "/text": {
+            "id": "/text",
+            "fieldPath": "/text",
+            "rank": "7",
+            "width": 480
+          },
+          "/attributes/agent": {
+            "id": "/attributes/agent",
+            "fieldPath": "/attributes/agent",
+            "rank": "A",
+            "hidden": true
+          },
+          "/attributes/date": {
+            "id": "/attributes/date",
+            "fieldPath": "/attributes/date",
+            "rank": "F"
+          },
+          "/attributes/assignee": {
+            "id": "/attributes/assignee",
+            "fieldPath": "/attributes/assignee",
+            "rank": "N"
+          },
+          "/attributes/comment": {
+            "id": "/attributes/comment",
+            "fieldPath": "/attributes/comment",
+            "rank": "V",
+            "hidden": true
+          },
+          "/attributes/reaction": {
+            "id": "/attributes/reaction",
+            "fieldPath": "/attributes/reaction",
+            "rank": "c",
+            "hidden": true
+          },
+          "/attributes/timer": {
+            "id": "/attributes/timer",
+            "fieldPath": "/attributes/timer",
+            "rank": "k",
+            "hidden": true
+          },
+          "/attributes/media": {
+            "id": "/attributes/media",
+            "fieldPath": "/attributes/media",
+            "rank": "s",
+            "hidden": true
+          },
+          "/attributes/created/at": {
+            "id": "/attributes/created/at",
+            "fieldPath": "/attributes/created/at",
+            "rank": "t",
+            "hidden": true
+          },
+          "/attributes/created/by": {
+            "id": "/attributes/created/by",
+            "fieldPath": "/attributes/created/by",
+            "rank": "u",
+            "hidden": true
+          },
+          "/attributes/updated/at": {
+            "id": "/attributes/updated/at",
+            "fieldPath": "/attributes/updated/at",
+            "rank": "vF",
+            "hidden": true
+          },
+          "/attributes/updated/by": {
+            "id": "/attributes/updated/by",
+            "fieldPath": "/attributes/updated/by",
+            "rank": "wF",
+            "hidden": true
+          },
+          "/attributes/completed/at": {
+            "id": "/attributes/completed/at",
+            "fieldPath": "/attributes/completed/at",
+            "rank": "x",
+            "hidden": true
+          },
+          "/attributes/completed/by": {
+            "id": "/attributes/completed/by",
+            "fieldPath": "/attributes/completed/by",
+            "rank": "y",
+            "hidden": true
+          },
+          "/attributes/@pro1": {
+            "id": "/attributes/@pro1",
+            "fieldPath": "/attributes/@pro1",
+            "rank": "z",
+            "hidden": false
+          },
+          "/attributes/@pro2": {
+            "id": "/attributes/@pro2",
+            "fieldPath": "/attributes/@pro2",
+            "rank": "zV",
+            "hidden": false
+          },
+          "/attributes/@pro3": {
+            "id": "/attributes/@pro3",
+            "fieldPath": "/attributes/@pro3",
+            "rank": "zk",
+            "hidden": false
+          },
+          "/attributes/@pro4": {
+            "id": "/attributes/@pro4",
+            "fieldPath": "/attributes/@pro4",
+            "rank": "zs",
+            "hidden": false
+          },
+          "/attributes/@pro5": {
+            "id": "/attributes/@pro5",
+            "fieldPath": "/attributes/@pro5",
+            "rank": "zw",
+            "hidden": false
+          },
+          "/attributes/@pro6": {
+            "id": "/attributes/@pro6",
+            "fieldPath": "/attributes/@pro6",
+            "rank": "zy",
+            "hidden": false
+          },
+          "/attributes/@pro7": {
+            "id": "/attributes/@pro7",
+            "fieldPath": "/attributes/@pro7",
+            "rank": "zz",
+            "hidden": false
+          },
+          "/attributes/@pro8": {
+            "id": "/attributes/@pro8",
+            "fieldPath": "/attributes/@pro8",
+            "rank": "zzV",
+            "hidden": false
+          },
+          "/attributes/@pro9": {
+            "id": "/attributes/@pro9",
+            "fieldPath": "/attributes/@pro9",
+            "rank": "zzk",
+            "hidden": false
+          },
+          "/attributes/@pr10": {
+            "id": "/attributes/@pr10",
+            "fieldPath": "/attributes/@pr10",
+            "rank": "zzs",
+            "hidden": false
+          }
+        }
+      }
+    },
+    "fields": {
+      "@pr10": {
+        "type": "string",
+        "displayName": "Features"
+      },
+      "@pro1": {
+        "type": "string",
+        "displayName": "Product Name"
+      },
+      "@pro2": {
+        "type": "string",
+        "displayName": "Product Category"
+      },
+      "@pro3": {
+        "type": "number",
+        "displayName": "Price",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "currency",
+          "config": {
+            "type": "standard",
+            "code": "ZAR"
+          }
+        }
+      },
+      "@pro4": {
+        "type": "Select",
+        "displayName": "Availability",
+        "options": {
+          "in-stock": {
+            "id": "in-stock",
+            "name": "In Stock",
+            "color": "#10B981",
+            "rank": "0"
+          },
+          "low-stock": {
+            "id": "low-stock",
+            "name": "Low Stock",
+            "color": "#F59E0B",
+            "rank": "1"
+          },
+          "out-of-stock": {
+            "id": "out-of-stock",
+            "name": "Out of Stock",
+            "color": "#EF4444",
+            "rank": "2"
+          },
+          "discontinued": {
+            "id": "discontinued",
+            "name": "Discontinued",
+            "color": "#6B7280",
+            "rank": "3"
+          }
+        }
+      },
+      "@pro5": {
+        "type": "string",
+        "displayName": "SKU"
+      },
+      "@pro6": {
+        "type": "string",
+        "displayName": "Description"
+      },
+      "@pro7": {
+        "type": "number",
+        "displayName": "Stock Quantity",
+        "render": {
+          "type": "text"
+        },
+        "format": {
+          "type": "decimal"
+        }
+      },
+      "@pro8": {
+        "type": "string",
+        "displayName": "Supplier"
+      },
+      "@pro9": {
+        "type": "DateTime",
+        "title": "Last Restocked"
+      }
+    }
+  },
+  "preferences": {
+    "defaultView": "table"
+  }
+}

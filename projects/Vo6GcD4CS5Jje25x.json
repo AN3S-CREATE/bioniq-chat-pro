@@ -1,0 +1,1209 @@
+{
+  "root": {
+    "type": "root",
+    "children": [
+      {
+        "type": "text",
+        "id": "9020c34d-7381-4963-9d8d-75b353a2501f",
+        "text": {
+          "ops": [
+            {
+              "insert": "TASKS.md"
+            },
+            {
+              "insert": "\n",
+              "attributes": {
+                "paragraph": true
+              }
+            }
+          ]
+        },
+        "format": null,
+        "collapsed": false,
+        "completed": false,
+        "children": [
+          {
+            "type": "text",
+            "id": "61411282-b600-47f2-abfd-97fa184735fe",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Done",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h2",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": [
+              {
+                "type": "text",
+                "id": "95de65ea-dde4-4ed5-b6c1-2600aec83f7d",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-08 12:57 UTC - Build completed: 4 steps done",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "fd5f2873-0fc2-4058-9f7e-66a0691b7648",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Build completed: 4 steps done",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "text",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "96bdbcf4-7e49-486c-b13f-60057b8e9292",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Steps completed:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "8bd13b03-87e4-4404-a07a-910ff8a9b71a",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Rewrite FullScreenWhatsApp with bubble tails, refined header, and precision spacing",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "9a0cb296-c598-483a-81f9-0e42f07ac5e7",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Inline WhatsApp typing dots (no more bulky TypingIndicator)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "ab2d1e92-efce-4ed7-b5dd-697a15a9c537",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Inline WhatsApp status line (no more bulky OnlineStatus)",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "669a2f60-2f68-47f8-a0ae-f9f207f9eca2",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Verify build and navigate to app",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "18771172-0089-4884-a795-9f2157bfdf7d",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Projects: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Installation Appointments",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/S9ZKbhB6t7DYcjFt"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Conversations",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/FEEux561JsGo2G6G"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Product Inventory",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/HPpKWYiSMBbn6Ta8"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Support Tickets",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/NTEpfNJa25HGekRL"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Order Management",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/ZGP7PY6VQiAhvEpK"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Customer Database",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/EdTX81Qs3i4JwPxs"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "697bb7c8-9f1c-406a-8c1e-713138b8926d",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Agents: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Support Agent",
+                          "attributes": {
+                            "link": "https://www.taskade.com/agent/01K8BSAKNHPDZHBSZ3RV4DK9E9"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "id": "0b55bcbe-92aa-4656-bbda-99c597c76976",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-08 12:53 UTC - Build completed: 4 steps done",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "165b73e0-8db8-44da-a0bd-8e489ae2d865",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Build completed: 4 steps done",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "text",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "8c1e0184-50b9-4507-a9b2-b2e45333fc4d",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Steps completed:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "e9850cf0-491b-41db-91bb-1e57f723e0e6",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Rewrite FullScreenWhatsApp with bubble tails, refined header, and precision spacing",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "4fed142f-86b1-455a-aea7-732823cad76e",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Simplify TypingIndicator to WhatsApp-style three-dot bubble only",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "4b9564d2-de39-4082-b45d-bd805642366a",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Simplify OnlineStatus to match WhatsApp header status line",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "35bff371-4832-41c0-82ed-7bb26b0c45d5",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Verify build and navigate to app",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "743c11ba-0c93-4636-b265-eb70ad171dd8",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Projects: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Installation Appointments",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/S9ZKbhB6t7DYcjFt"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Conversations",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/FEEux561JsGo2G6G"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Product Inventory",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/HPpKWYiSMBbn6Ta8"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Support Tickets",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/NTEpfNJa25HGekRL"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Order Management",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/ZGP7PY6VQiAhvEpK"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Customer Database",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/EdTX81Qs3i4JwPxs"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "a4afdae5-24b1-4188-ba9d-6134f2e95595",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Agents: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Support Agent",
+                          "attributes": {
+                            "link": "https://www.taskade.com/agent/01K8BSAKNHPDZHBSZ3RV4DK9E9"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "id": "e73a6301-b842-4cc1-9126-1494e8148e5d",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-08 11:55 UTC - Build completed: 4 steps done",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "5d2438eb-319a-4078-94a2-f4ed5de978b7",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Build completed: 4 steps done",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "text",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "dd910bdf-a92b-41f3-9aff-4db8aa553abc",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Steps completed:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "0452da4f-572a-485a-a70f-97acd2be6f69",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Rewrite simulateBotResponse with real agent API calls using SSE streaming",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "5f1d846c-16a6-43e8-91d7-f99afc875c9a",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Add conversation creation on mount",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "0adb34cd-2c9e-4c5d-a2c0-9882693b9e21",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Add error handling and fallback for API failures",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "2646f650-ce0a-4c48-b874-d5f313ee2dd9",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Verify the changes work",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "dd574dfe-a278-46a5-8700-670b469451e4",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Projects: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Installation Appointments",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/S9ZKbhB6t7DYcjFt"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Conversations",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/FEEux561JsGo2G6G"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Product Inventory",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/HPpKWYiSMBbn6Ta8"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Support Tickets",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/NTEpfNJa25HGekRL"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Order Management",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/ZGP7PY6VQiAhvEpK"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Customer Database",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/EdTX81Qs3i4JwPxs"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "57d43522-2db0-405f-b18b-e34dd494072d",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Agents: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Support Agent",
+                          "attributes": {
+                            "link": "https://www.taskade.com/agent/01K8BSAKNHPDZHBSZ3RV4DK9E9"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "id": "14f6ccb0-eb1d-4d83-8a90-75c26b774cb6",
+                "text": {
+                  "ops": [
+                    {
+                      "insert": "2026-07-08 09:12 UTC - Build completed: 2 steps done",
+                      "attributes": {
+                        "bold": true
+                      }
+                    },
+                    {
+                      "insert": "\n",
+                      "attributes": {
+                        "paragraph": true
+                      }
+                    }
+                  ]
+                },
+                "format": {
+                  "node": "text",
+                  "children": null
+                },
+                "collapsed": true,
+                "completed": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "id": "da24c341-4bf5-4b3b-af38-c6baad29d179",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Build completed: 2 steps done",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "text",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "48c56faa-84cf-4ff2-ac92-c5465262fafd",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Steps completed:",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": [
+                      {
+                        "type": "text",
+                        "id": "52aae353-20a6-43ba-909a-265965b09764",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Rewrite FullScreenWhatsApp with TypingIndicator, MessageStatus, OnlineStatus integration",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "id": "a17aabf2-97a4-4a47-aee8-9e2bdca01ab1",
+                        "text": {
+                          "ops": [
+                            {
+                              "insert": "Verify build compiles cleanly",
+                              "attributes": {}
+                            },
+                            {
+                              "insert": "\n",
+                              "attributes": {
+                                "paragraph": true
+                              }
+                            }
+                          ]
+                        },
+                        "format": {
+                          "node": "bullet",
+                          "children": null
+                        },
+                        "collapsed": false,
+                        "completed": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "id": "12bdeac1-f041-437a-a23e-e04bc302cf5b",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Projects: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Installation Appointments",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/S9ZKbhB6t7DYcjFt"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Conversations",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/FEEux561JsGo2G6G"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Product Inventory",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/HPpKWYiSMBbn6Ta8"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Support Tickets",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/NTEpfNJa25HGekRL"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Order Management",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/ZGP7PY6VQiAhvEpK"
+                          }
+                        },
+                        {
+                          "insert": ", ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "Customer Database",
+                          "attributes": {
+                            "link": "https://www.taskade.com/d/EdTX81Qs3i4JwPxs"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "id": "10841df4-1d69-4e7b-a4b9-109ed0c78c30",
+                    "text": {
+                      "ops": [
+                        {
+                          "insert": "Agents: ",
+                          "attributes": {}
+                        },
+                        {
+                          "insert": "WhatsApp Support Agent",
+                          "attributes": {
+                            "link": "https://www.taskade.com/agent/01K8BSAKNHPDZHBSZ3RV4DK9E9"
+                          }
+                        },
+                        {
+                          "insert": "\n",
+                          "attributes": {
+                            "paragraph": true
+                          }
+                        }
+                      ]
+                    },
+                    "format": {
+                      "node": "bullet",
+                      "children": null
+                    },
+                    "collapsed": false,
+                    "completed": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "63c31718-7ca7-4c68-bb62-66c3384bd48e",
+            "text": {
+              "ops": [
+                {
+                  "insert": "Knowledge",
+                  "attributes": {}
+                },
+                {
+                  "insert": "\n",
+                  "attributes": {
+                    "paragraph": true
+                  }
+                }
+              ]
+            },
+            "format": {
+              "node": "h2",
+              "children": null
+            },
+            "collapsed": false,
+            "completed": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "preferences": {
+    "defaultView": "list",
+    "avatar": {
+      "type": "emoji",
+      "value": "⚡"
+    },
+    "coverImageType": "background",
+    "background": {
+      "data": {
+        "value": "bg-random"
+      },
+      "type": "default"
+    }
+  },
+  "pinnedAt": "2026-07-08T09:12:26.356Z"
+}
