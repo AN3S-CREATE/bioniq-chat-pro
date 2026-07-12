@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Send, Phone, Video, MoreVertical, ArrowLeft, Paperclip, Mic, Smile, ShieldAlert } from 'lucide-react';
 
 type MessageStatusType = 'sending' | 'sent' | 'delivered' | 'read' | 'failed';
@@ -12,6 +12,24 @@ interface Message {
   timestamp: Date;
   status?: MessageStatusType;
   quickReplies?: string[];
+}
+
+interface Customer {
+  id: string;
+  name: string;
+  phone: string;
+  email: string;
+  status: string;
+  internetPlan: string;
+  monthlyFee: number;
+}
+
+interface RawMessage {
+  id: string;
+  text: string;
+  sender: string;
+  timestamp: string;
+  status: string;
 }
 
 const CheckIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -62,7 +80,7 @@ export default function ChatPortal() {
   const [phone, setPhone] = useState('');
   const [name, setName] = useState('');
   const [isConnected, setIsConnected] = useState(false);
-  const [customer, setCustomer] = useState<any>(null);
+  const [customer, setCustomer] = useState<Customer | null>(null);
   const [threadId, setThreadId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
@@ -86,28 +104,7 @@ export default function ChatPortal() {
     });
   }, []);
 
-  // Restore session if active in sessionStorage
-  useEffect(() => {
-    try {
-      const savedPhone = sessionStorage.getItem('bioniq_phone');
-      const savedThreadId = sessionStorage.getItem('bioniq_thread_id');
-      if (savedPhone && savedThreadId) {
-        initSession(savedPhone);
-      } else {
-        setLoadingSession(false);
-      }
-    } catch {
-      setLoadingSession(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isConnected) {
-      scrollToBottom(false);
-    }
-  }, [messages, isConnected, scrollToBottom]);
-
-  const initSession = async (userPhone: string, userName?: string) => {
+  const initSession = useCallback(async (userPhone: string, userName?: string) => {
     try {
       const res = await fetch('/api/conversations', {
         method: 'POST',
@@ -120,8 +117,7 @@ export default function ChatPortal() {
       setCustomer(data.customer);
       setThreadId(data.threadId);
       
-      // Parse dates from string to Date objects
-      const parsedMsgs: Message[] = data.messages.map((m: any) => ({
+      const parsedMsgs: Message[] = data.messages.map((m: RawMessage) => ({
         id: m.id,
         text: m.text,
         sender: m.sender as 'user' | 'bot' | 'agent',
@@ -129,7 +125,6 @@ export default function ChatPortal() {
         status: m.status as MessageStatusType,
       }));
 
-      // Add default quick replies if no messages yet
       if (parsedMsgs.length === 0) {
         parsedMsgs.push({
           id: 'greeting',
@@ -144,7 +139,6 @@ export default function ChatPortal() {
       setMessages(parsedMsgs);
       setIsConnected(true);
 
-      // Persist in session storage
       sessionStorage.setItem('bioniq_phone', userPhone);
       sessionStorage.setItem('bioniq_thread_id', data.threadId);
     } catch (err) {
@@ -153,25 +147,55 @@ export default function ChatPortal() {
     } finally {
       setLoadingSession(false);
     }
-  };
+  }, []);
 
-  const handleConnect = (e: React.FormEvent) => {
+  // Restore session if active in sessionStorage
+  useEffect(() => {
+    let active = true;
+    const restoreSession = async () => {
+      const savedPhone = sessionStorage.getItem('bioniq_phone');
+      const savedThreadId = sessionStorage.getItem('bioniq_thread_id');
+      if (savedPhone && savedThreadId) {
+        if (active) {
+          await initSession(savedPhone);
+        }
+      } else {
+        if (active) {
+          setLoadingSession(false);
+        }
+      }
+    };
+    restoreSession().catch(() => {
+      if (active) setLoadingSession(false);
+    });
+    return () => {
+      active = false;
+    };
+  }, [initSession]);
+
+  useEffect(() => {
+    if (isConnected) {
+      scrollToBottom(false);
+    }
+  }, [messages, isConnected, scrollToBottom]);
+
+  const handleConnect = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     if (!phone.trim()) return;
     setLoadingSession(true);
     initSession(phone.trim(), name.trim());
-  };
+  }, [phone, name, initSession]);
 
-  const handleDisconnect = () => {
+  const handleDisconnect = useCallback(() => {
     sessionStorage.removeItem('bioniq_phone');
     sessionStorage.removeItem('bioniq_thread_id');
     setIsConnected(false);
     setCustomer(null);
     setThreadId(null);
     setMessages([]);
-  };
+  }, []);
 
-  const streamAgentResponse = async (userText: string) => {
+  const streamAgentResponse = useCallback(async (userText: string) => {
     if (!threadId || !customer) return;
 
     setIsBotTyping(true);
@@ -208,7 +232,7 @@ export default function ChatPortal() {
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let buffer = '';
-      let accumulated = '';
+      const acc = { text: '' };
 
       while (true) {
         const { done, value } = await reader.read();
@@ -221,14 +245,13 @@ export default function ChatPortal() {
         for (const line of lines) {
           if (!line.trim()) continue;
           
-          // Check for Vercel AI SDK text-delta stream prefix: "0:"
           if (line.startsWith('0:')) {
             try {
               const raw = line.slice(2).trim();
               const chunk = JSON.parse(raw);
-              accumulated += chunk;
+              acc.text += chunk;
               setMessages(prev => prev.map(m =>
-                m.id === streamMsgId ? { ...m, text: accumulated } : m
+                m.id === streamMsgId ? { ...m, text: acc.text } : m
               ));
             } catch {
               continue;
@@ -237,14 +260,14 @@ export default function ChatPortal() {
         }
       }
 
-      const finalText = accumulated.trim() || "I'm here to help! Could you rephrase that?";
+      const finalText = acc.text.trim() || "I'm here to help! Could you rephrase that?";
       setMessages(prev => prev.map(m =>
         m.id === streamMsgId
           ? { ...m, text: finalText, id: crypto.randomUUID(), status: 'read' as const }
           : m
       ));
-    } catch (err: any) {
-      if (err.name === 'AbortError') {
+    } catch (err: unknown) {
+      if (err && typeof err === 'object' && 'name' in err && err.name === 'AbortError') {
         setMessages(prev => prev.filter(m => m.id !== streamMsgId));
         return;
       }
@@ -258,9 +281,9 @@ export default function ChatPortal() {
       setIsBotTyping(false);
       abortControllerRef.current = null;
     }
-  };
+  }, [threadId, customer]);
 
-  const handleSendMessage = (text: string) => {
+  const handleSendMessage = useCallback((text: string) => {
     if (!text.trim()) return;
     const now = Date.now();
     if (now - lastSendRef.current < 400) return; // rate limit spam guard
@@ -281,7 +304,7 @@ export default function ChatPortal() {
     }, 1000);
 
     streamAgentResponse(text);
-  };
+  }, [streamAgentResponse]);
 
   if (loadingSession) {
     return (

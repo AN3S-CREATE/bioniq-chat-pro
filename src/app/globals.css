@@ -42,7 +42,6 @@ body {
 
 .wa-scroll {
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 
 .wa-bg {

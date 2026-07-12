@@ -59,8 +59,9 @@ export async function POST(req: Request) {
       threadId: thread.id,
       messages,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error starting conversation:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Internal Server Error';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

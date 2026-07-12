@@ -10,7 +10,8 @@ export async function GET() {
       orderBy: { updatedAt: 'desc' },
     });
     return NextResponse.json(threads);
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

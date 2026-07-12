@@ -106,7 +106,7 @@ State and currency details:
               category: z.enum(['technical', 'billing', 'account', 'general']),
               priority: z.enum(['low', 'medium', 'high', 'critical']),
             }),
-            execute: async ({ title, category, priority }) => {
+            execute: async ({ title: _title, category, priority }) => {
               const count = await prisma.supportTicket.count();
               const ticketId = `TICKET-2024-${String(count + 1).padStart(3, '0')}`;
               const ticket = await prisma.supportTicket.create({
@@ -172,11 +172,10 @@ State and currency details:
 
       return result.toTextStreamResponse();
     } else {
-      // Fallback: Graceful degradation mock stream response
+       // Fallback: Graceful degradation mock stream response
       // Simulates AI streaming responses with database checks
       const userText = message.toLowerCase();
       let responseText = '';
-      let simulatedToolResult = '';
 
       if (userText.includes('plan') || userText.includes('package') || userText.includes('price')) {
         const products = await prisma.product.findMany({ where: { category: { in: ['Subscription', 'Hardware'] } } });
@@ -223,7 +222,7 @@ State and currency details:
           // Book a mock appointment
           const appointmentDate = new Date();
           appointmentDate.setDate(appointmentDate.getDate() + 3); // 3 days from now
-          const appointment = await prisma.installationAppointment.create({
+          await prisma.installationAppointment.create({
             data: {
               customerId,
               type: 'wifi-setup',
@@ -248,10 +247,8 @@ State and currency details:
         async start(controller) {
           // Send response chunks
           const words = responseText.split(' ');
-          let currentText = '';
           for (let i = 0; i < words.length; i++) {
             const delta = words[i] + (i === words.length - 1 ? '' : ' ');
-            currentText += delta;
             
             // Format delta as Vercel AI SDK text-delta stream format
             // format: 0:"text"\n
@@ -290,8 +287,9 @@ State and currency details:
         }
       });
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in chat API:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Internal Server Error';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

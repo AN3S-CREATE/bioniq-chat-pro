@@ -181,7 +181,7 @@ async function main() {
       const attrs = row.attributes || {};
       const customerName = attrs['@ins1'] || '';
       const customerPhone = attrs['@ins2'] || '';
-      const address = attrs['@ins3'] || '';
+      const _address = attrs['@ins3'] || '';
       const type = attrs['@ins4']?.optionId || 'fiber';
       const status = attrs['@ins5']?.optionId || 'scheduled';
       const date = attrs['@ins6']?.dateTime?.date ? new Date(attrs['@ins6'].dateTime.date) : new Date();

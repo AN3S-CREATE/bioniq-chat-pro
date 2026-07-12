@@ -43,24 +43,33 @@ Bioniq Support System is a fully standalone, independent customer care platform 
 ### Local Development Setup
 
 1. **Clone and Install Dependencies**:
+
    ```bash
    npm install
    ```
+
 2. **Sync Database Schema**:
+
    ```bash
    npx prisma db push
    ```
+
 3. **Seed Database with Legacy Taskade Dumps**:
+
    ```bash
    npx tsx prisma/seed.ts
    ```
+
 4. **Configure Environment Variables**:
    Create a `.env` file in the root directory (refer to `.env.example`):
+
    ```env
    DATABASE_URL="file:./dev.db"
    OPENAI_API_KEY="your-openai-api-key"
    ```
+
 5. **Launch Server**:
+
    ```bash
    npm run dev
    ```
@@ -73,7 +82,9 @@ Bioniq Support System is a fully standalone, independent customer care platform 
 To spin up the entire stack self-hosted:
 
 1. Build and run containers:
+
    ```bash
    docker compose up --build -d
    ```
+
 2. The application will start at [http://localhost:3000](http://localhost:3000), initializing the SQLite database at `/app/prisma_db/production.db` within a persistent volume.

@@ -1,36 +1,125 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { 
   Users, Ticket, Calendar, ShoppingCart, Package, MessageSquare, 
-  Settings, LogOut, Search, Plus, Edit, Trash2, CheckCircle, RefreshCw, Send
+  Settings, LogOut, Edit, Trash2, RefreshCw, Send
 } from 'lucide-react';
 
 type TabType = 'overview' | 'chats' | 'customers' | 'tickets' | 'appointments' | 'products' | 'orders';
+
+interface Customer {
+  id: string;
+  name: string;
+  phone: string;
+  email: string;
+  status: string;
+  internetPlan: string;
+  monthlyFee: number;
+}
+
+interface Thread {
+  id: string;
+  customer?: Customer;
+  lastBotResponse?: string;
+  status: string;
+  updatedAt: string;
+}
+
+interface Message {
+  id: string;
+  text: string;
+  sender: 'user' | 'bot' | 'agent';
+  timestamp: string;
+}
+
+interface Ticket {
+  id: string;
+  customer?: Customer;
+  category: string;
+  priority: string;
+  status: string;
+  assignedAgent?: string;
+}
+
+interface Appointment {
+  id: string;
+  customer?: Customer;
+  type: string;
+  date: string;
+  timeSlot: string;
+  technician?: string;
+  status: string;
+}
+
+interface Product {
+  id: string;
+  sku: string;
+  name: string;
+  category: string;
+  price: number;
+  stockQuantity: number;
+  availability: string;
+}
+
+interface Order {
+  id: string;
+  customer?: Customer;
+  itemsOrdered: string;
+  totalAmount: number;
+  trackingNumber?: string;
+  paymentStatus: string;
+  status: string;
+}
+
+interface EditableType {
+  id: string;
+  name?: string;
+  phone?: string;
+  email?: string;
+  status?: string;
+  internetPlan?: string;
+  monthlyFee?: number;
+  priority?: string;
+  category?: string;
+  assignedAgent?: string;
+  type?: string;
+  date?: string;
+  timeSlot?: string;
+  technician?: string;
+  sku?: string;
+  price?: number;
+  stockQuantity?: number;
+  availability?: string;
+  itemsOrdered?: string;
+  totalAmount?: number;
+  trackingNumber?: string;
+  paymentStatus?: string;
+}
 
 export default function AdminPortal() {
   const [activeTab, setActiveTab] = useState<TabType>('overview');
   const [loading, setLoading] = useState(true);
   
   // Data lists
-  const [threads, setThreads] = useState<any[]>([]);
-  const [customers, setCustomers] = useState<any[]>([]);
-  const [tickets, setTickets] = useState<any[]>([]);
-  const [appointments, setAppointments] = useState<any[]>([]);
-  const [products, setProducts] = useState<any[]>([]);
-  const [orders, setOrders] = useState<any[]>([]);
+  const [threads, setThreads] = useState<Thread[]>([]);
+  const [customers, setCustomers] = useState<Customer[]>([]);
+  const [tickets, setTickets] = useState<Ticket[]>([]);
+  const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [orders, setOrders] = useState<Order[]>([]);
 
   // Selected items for detail views / editing
-  const [activeThread, setActiveThread] = useState<any>(null);
-  const [threadMessages, setThreadMessages] = useState<any[]>([]);
+  const [activeThread, setActiveThread] = useState<Thread | null>(null);
+  const [threadMessages, setThreadMessages] = useState<Message[]>([]);
   const [agentReply, setAgentReply] = useState('');
-  const [editingItem, setEditingItem] = useState<any>(null);
+  const [editingItem, setEditingItem] = useState<EditableType | null>(null);
   const [editingModel, setEditingModel] = useState<TabType | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Fetch all data
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     try {
       const [threadsRes, custRes, tickRes, appRes, prodRes, ordRes] = await Promise.all([
@@ -57,27 +146,25 @@ export default function AdminPortal() {
       setAppointments(appData);
       setProducts(prodData);
       setOrders(ordData);
-
-      // If we have an active thread, refresh its messages too
-      if (activeThread) {
-        const found = threadsData.find((t: any) => t.id === activeThread.id);
-        if (found) {
-          setActiveThread(found);
-          const msgRes = await fetch(`/api/threads/${found.id}/messages`);
-          const msgData = await msgRes.json();
-          setThreadMessages(msgData);
-        }
-      }
     } catch (err) {
       console.error('Error fetching admin data:', err);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    let active = true;
+    const load = async () => {
+      if (active) {
+        await fetchData();
+      }
+    };
+    load();
+    return () => {
+      active = false;
+    };
+  }, [fetchData]);
 
   // Poll for message updates in active thread every 3 seconds
   useEffect(() => {
@@ -100,7 +187,7 @@ export default function AdminPortal() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [threadMessages]);
 
-  const handleSelectThread = async (thread: any) => {
+  const handleSelectThread = async (thread: Thread) => {
     setActiveThread(thread);
     try {
       const res = await fetch(`/api/threads/${thread.id}/messages`);
@@ -129,7 +216,7 @@ export default function AdminPortal() {
         const listRes = await fetch('/api/threads');
         const listData = await listRes.json();
         setThreads(listData);
-        const updatedThread = listData.find((t: any) => t.id === activeThread.id);
+        const updatedThread = listData.find((t: Thread) => t.id === activeThread.id);
         if (updatedThread) setActiveThread(updatedThread);
       }
     } catch (err) {
@@ -402,15 +489,7 @@ export default function AdminPortal() {
                       <div className="flex gap-2">
                         <select 
                           value={activeThread.status}
-                          onChange={async (e) => {
-                            const newStatus = e.target.value;
-                            await fetch(`/api/admin?model=tickets&id=${activeThread.id}`, { // wait, thread is not ticket, let's fix endpoint. Wait! Our admin PUT supports threads?
-                              // Let's edit status of thread. Wait, our PUT in admin/route.ts doesn't support 'threads', let's check!
-                              // In route.ts we supported customers, products, orders, tickets, appointments. We didn't support threads update directly in case of tab.
-                              // Wait, we can edit the thread status via a direct fetch or fix route.ts, but let's check if we can update thread status.
-                              // Let's make sure we update thread status.
-                            });
-                          }}
+                          onChange={() => {}}
                           className="text-xs border border-gray-200 rounded px-2 py-1 focus:outline-none"
                           disabled
                         >

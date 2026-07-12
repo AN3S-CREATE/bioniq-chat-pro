@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { PrismaBetterSqlite3 } from '@prisma/adapter-better-sqlite3';
+import * as fs from 'fs';
 
 const globalForPrisma = global as unknown as { prisma: PrismaClient };
 
@@ -16,8 +17,8 @@ export const getPrismaClient = () => {
   const dirname = filename.includes('/') || filename.includes('\\')
     ? filename.substring(0, Math.max(filename.lastIndexOf('/'), filename.lastIndexOf('\\')))
     : '';
-  if (dirname && !require('fs').existsSync(dirname)) {
-    require('fs').mkdirSync(dirname, { recursive: true });
+  if (dirname && !fs.existsSync(dirname)) {
+    fs.mkdirSync(dirname, { recursive: true });
   }
 
   const adapter = new PrismaBetterSqlite3({ url: databaseUrl });
