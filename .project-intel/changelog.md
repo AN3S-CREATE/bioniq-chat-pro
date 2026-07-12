@@ -2,6 +2,14 @@
 
 All notable analyses and changes to the Bioniq Chat Pro workspace will be documented in this file.
 
+## [1.1.3-Intel] - 2026-07-09
+
+### Fixed
+- **Missing Build Pipeline (ACT-001)**: Created `apps/default/scripts/build.mjs` and configured `apps/default/tailwind.config.js` to compile CSS and JS bundles using ESBuild and Tailwind. Verified build runs successfully.
+- **Agent Prompts Alignment (ACT-002)**: Replaced outdated "solar panel installation" descriptions, introductions, and conversation starters inside `agents/01K8BSAKNHPDZHBSZ3RV4DK9E9.json` with accurate Bioniq ISP parameters (uncapped speeds, fiber packages, router upgrades, support tickets).
+- **PostMessage Security Check (ACT-003)**: Hardened the PostMessage handler in `apps/default/src/lib/theme-bridge.ts` to validate parent origins against trusted domains (`https://*.taskade.com`) and local development ports.
+- **Private Dependency Bypass**: Removed type dependencies on private package `@taskade/parade-shared` from `package.json` and declared inline stubs in `genesis.tsx` to enable local compilation of the React code from the public npm registry.
+
 ## [1.1.2-Intel] - 2026-07-09
 
 ### Added

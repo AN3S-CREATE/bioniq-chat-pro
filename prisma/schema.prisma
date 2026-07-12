@@ -1,0 +1,112 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       String @id @default(uuid())
+  username String @unique
+  password String // hashed
+  role     String @default("agent") // agent, admin
+}
+
+model Customer {
+  id               String          @id @default(uuid())
+  name             String
+  phone            String          @unique
+  email            String          @unique
+  status           String          // active, inactive, suspended, pending
+  internetPlan     String
+  joinDate         DateTime        @default(now())
+  lastContact      DateTime        @default(now())
+  address          String
+  language         String          @default("english") // english, afrikaans, zulu, other
+  monthlyFee       Float           @default(0.0) // ZAR
+  whatsappId       String?
+  orders           Order[]
+  tickets          SupportTicket[]
+  appointments     InstallationAppointment[]
+  threads          ChatThread[]
+}
+
+model Product {
+  id            String   @id @default(uuid())
+  sku           String   @unique
+  name          String
+  category      String   // Installation, Hardware, Subscription
+  price         Float    // ZAR
+  availability  String   // in-stock, out-of-stock, backorder
+  description   String
+  stockQuantity Int      @default(0)
+  supplier      String
+  features      String?  // comma-separated or json text
+}
+
+model Order {
+  id              String    @id @default(uuid()) // BQ-XXXX-XXXX
+  customerId      String
+  customer        Customer  @relation(fields: [customerId], references: [id])
+  itemsOrdered    String    // e.g. "Fiber Installation Kit x1"
+  status          String    // pending, confirmed, shipped, delivered, cancelled
+  totalAmount     Float     // ZAR
+  orderDate       DateTime  @default(now())
+  deliveryDate    DateTime?
+  trackingNumber  String?
+  deliveryAddress String
+  paymentStatus   String    // unpaid, paid, refunded
+}
+
+model SupportTicket {
+  id             String    @id @default(uuid()) // TICKET-YYYY-XXX
+  customerId     String
+  customer       Customer  @relation(fields: [customerId], references: [id])
+  status         String    // open, in-progress, waiting, resolved, closed
+  priority       String    // low, medium, high, critical
+  category       String    // technical, billing, account, general
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  assignedAgent  String?
+  channel        String    @default("whatsapp")
+  resolutionTime Float?    // hours
+}
+
+model InstallationAppointment {
+  id               String   @id @default(uuid())
+  customerId       String
+  customer         Customer @relation(fields: [customerId], references: [id])
+  type             String   // fiber, wifi-setup, maintenance, troubleshooting
+  status           String   // scheduled, in-progress, completed, cancelled, delayed
+  date             DateTime
+  timeSlot         String   // "09:00 - 13:00"
+  technician       String
+  duration         Float    // hours
+  notes            String?
+}
+
+model ChatThread {
+  id             String        @id @default(uuid())
+  customerId     String
+  customer       Customer      @relation(fields: [customerId], references: [id])
+  status         String        @default("active") // active, waiting, escalated, resolved, closed
+  botConfidence  String        @default("high")   // high, medium, low
+  intentCategory String?
+  messageCount   Int           @default(0)
+  lastBotResponse String?
+  assignedAgent  String?
+  messages       ChatMessage[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model ChatMessage {
+  id        String     @id @default(uuid())
+  threadId  String
+  thread    ChatThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  sender    String     // user, bot, agent
+  text      String
+  timestamp DateTime   @default(now())
+  status    String     @default("sent") // sending, sent, delivered, read, failed
+}

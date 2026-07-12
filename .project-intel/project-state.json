@@ -10,25 +10,30 @@
     "integration": ["Taskade Parade SDK", "Axios"]
   },
   "maturityLevel": "Prototype / Preview Template",
-  "lastAnalyzed": "2026-07-09T15:10:05+02:00",
+  "lastAnalyzed": "2026-07-09T15:47:03+02:00",
   "criticalIssues": [
-    {
-      "id": "CRIT-001",
-      "title": "Missing build/dev scripts",
-      "severity": "P0",
-      "description": "package.json scripts target scripts/build.mjs which is physically missing from the workspace."
-    },
-    {
-      "id": "CRIT-002",
-      "title": "Agent domain/purpose mismatch",
-      "severity": "P1",
-      "description": "Agent description refers to solar panel installation business, while customer database, product inventory, and UI represent an ISP named Bioniq."
-    },
     {
       "id": "CRIT-003",
       "title": "Security: Hardcoded admin panel password",
       "severity": "P2",
-      "description": "AdminPanel.tsx has hardcoded credentials (admin123)."
+      "description": "AdminPanel.tsx has hardcoded credentials (admin123). Unused in active production views."
+    }
+  ],
+  "resolvedIssues": [
+    {
+      "id": "CRIT-001",
+      "title": "Missing build/dev scripts",
+      "resolvedAt": "2026-07-09T15:47:03+02:00"
+    },
+    {
+      "id": "CRIT-002",
+      "title": "Agent domain/purpose mismatch",
+      "resolvedAt": "2026-07-09T15:47:03+02:00"
+    },
+    {
+      "id": "SEC-001",
+      "title": "PostMessage origin check missing",
+      "resolvedAt": "2026-07-09T15:47:03+02:00"
     }
   ]
 }

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bioniq-app
+    ports:
+      - '3000:3000'
+    volumes:
+      - sqlite_data:/app/prisma_db
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:/app/prisma_db/production.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-your-openai-api-key}
+      # If using local Ollama on host, you can point to host.docker.internal
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    restart: always
+
+volumes:
+  sqlite_data:
